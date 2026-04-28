@@ -1,0 +1,15 @@
+services:
+  vikunja:
+    image: vikunja/vikunja:latest
+    container_name: vikunja
+    restart: unless-stopped
+    env_file:
+      - ../../env/vikunja.env.example
+    volumes:
+      - ./files:/app/vikunja/files
+    networks:
+      - apps
+
+networks:
+  apps:
+    external: true

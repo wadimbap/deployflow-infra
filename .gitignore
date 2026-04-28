@@ -1,0 +1,8 @@
+.env
+.env.*
+*.key
+*.pem
+*.ovpn
+secrets/
+data/
+*.log

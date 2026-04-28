@@ -1,0 +1,13 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: unless-stopped
+    env_file:
+      - ../../env/rabbitmq.env.example
+    networks:
+      - apps
+
+networks:
+  apps:
+    external: true
